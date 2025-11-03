@@ -1,57 +1,26 @@
 {
-    "name": "rinvex/laravel-attributes",
-    "description": "Rinvex Attributes is a robust, intelligent, and integrated Entity-Attribute-Value model (EAV) implementation for Laravel Eloquent, with powerful underlying for managing entity attributes implicitly as relations with ease. It utilizes the power of Laravel Eloquent, with smooth and seamless integration.",
-    "type": "library",
+    "name": "manish-pareek/laravel-attributes",
+    "description": "Flexible EAV (Entity–Attribute–Value) model for Laravel 10, 11, and 12.",
     "keywords": [
-        "eav",
-        "eloquent",
         "laravel",
-        "dynamic",
-        "robust",
-        "schema",
-        "model",
-        "value",
-        "entity",
-        "database",
-        "attribute",
-        "integrated",
-        "intelligent",
-        "entity-attribute-value"
+        "attributes",
+        "eav",
+        "rinvex",
+        "custom-fields"
     ],
     "license": "MIT",
-    "homepage": "https://rinvex.com",
-    "support": {
-        "email": "help@rinvex.com",
-        "issues": "https://github.com/rinvex/laravel-attributes/issues",
-        "source": "https://github.com/rinvex/laravel-attributes",
-        "docs": "https://github.com/rinvex/laravel-attributes/blob/master/README.md"
-    },
     "authors": [
         {
-            "name": "Rinvex LLC",
-            "homepage": "https://rinvex.com",
-            "email": "help@rinvex.com"
-        },
-        {
-            "name": "Abdelrahman Omran",
-            "homepage": "https://omranic.com",
-            "email": "me@omranic.com",
-            "role": "Project Lead"
-        },
-        {
-            "name": "Israel Ortuño",
-            "email": "israel@devio.es"
-        },
-        {
-            "name": "The Generous Laravel Community",
-            "homepage": "https://github.com/rinvex/laravel-attributes/contributors"
+            "name": "Manish Pareek",
+            "email": "your-email@example.com"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "illuminate/console": "^9.0 || ^10.0 || ^11.0 || ^12.0",
-        "illuminate/database": "^9.0 || ^10.0 || ^11.0 || ^12.0",
-        "illuminate/support": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+        "php": ">=8.1",
+        "illuminate/support": ">=10.0 <13.0",
+        "illuminate/database": ">=10.0 <13.0",
+        "illuminate/events": ">=10.0 <13.0",
+        "illuminate/console": ">=10.0 <13.0",
         "jeremeamia/superclosure": "^2.4.0",
         "rinvex/laravel-support": "^7.0 || ^8.0",
         "spatie/eloquent-sortable": "^4.0",
@@ -59,28 +28,18 @@
         "spatie/laravel-translatable": "^6.0"
     },
     "require-dev": {
-        "codedungeon/phpunit-result-printer": "^0.1.0",
-        "illuminate/container": "^9.0 || ^10.0 || ^11.0 || ^12.0",
-        "orchestra/testbench": "^7.0 || ^8.0 || ^9.0 || ^10.0",
-        "phpunit/phpunit": "^9.5 || ^10.0 || ^11.0"
+        "phpunit/phpunit": "^10.0",
+        "orchestra/testbench": ">=8.0 <11.0"
     },
     "autoload": {
         "psr-4": {
-            "Rinvex\\Attributes\\": "src"
+            "Rinvex\\Attributes\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rinvex\\Attributes\\Tests\\": "tests"
+            "Rinvex\\Attributes\\Tests\\": "tests/"
         }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit"
-    },
-    "config": {
-        "sort-packages": true,
-        "preferred-install": "dist",
-        "optimize-autoloader": true
     },
     "extra": {
         "laravel": {
