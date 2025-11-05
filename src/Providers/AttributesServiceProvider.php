@@ -6,11 +6,11 @@ namespace Rinvex\Attributes\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Rinvex\Attributes\Models\Attribute;
-use Rinvex\Support\Traits\ConsoleTools;
 use Rinvex\Attributes\Models\AttributeEntity;
 use Rinvex\Attributes\Console\Commands\MigrateCommand;
 use Rinvex\Attributes\Console\Commands\PublishCommand;
 use Rinvex\Attributes\Console\Commands\RollbackCommand;
+use Rinvex\Attributes\Traits\ConsoleTools;
 
 class AttributesServiceProvider extends ServiceProvider
 {
