@@ -15,7 +15,7 @@ trait ConsoleTools
      */
     protected function publishesAttributesMigrations(string $package, bool $isModule = false): void
     {
-        if (! $this->publishesResources()) {
+        if (! $this->publishesAttributesResources()) {
             return;
         }
 
