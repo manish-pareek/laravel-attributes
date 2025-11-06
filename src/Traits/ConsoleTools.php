@@ -47,7 +47,7 @@ trait ConsoleTools
      */
     protected function publishesAttributesConfig(string $package, bool $isModule = false): void
     {
-        if (! $this->publishesResources()) {
+        if (! $this->publishesAttributesResources()) {
             return;
         }
 
