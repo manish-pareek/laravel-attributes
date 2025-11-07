@@ -8,7 +8,7 @@ use Schema;
 use Closure;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use SuperClosure\Serializer;
+use Opis\Closure\SerializableClosure;
 use Rinvex\Attributes\Models\Value;
 use Rinvex\Attributes\Models\Attribute;
 use Illuminate\Database\Eloquent\Builder;
@@ -507,7 +507,7 @@ trait Attributable
         if ($this->isEntityAttributeRelation($method)) {
             $relation = $this->entityAttributeRelations[$method] instanceof Closure
                 ? $this->entityAttributeRelations[$method]
-                : (new Serializer())->unserialize($this->entityAttributeRelations[$method]);
+                : unserialize($this->entityAttributeRelations[$method])->getClosure();
 
             return call_user_func_array($relation, $parameters);
         }
@@ -528,7 +528,7 @@ trait Attributable
 
             foreach ($relations as $key => $value) {
                 if ($value instanceof Closure) {
-                    $this->setEntityAttributeRelation($key, (new Serializer())->serialize($value));
+                    $this->setEntityAttributeRelation($key, serialize(new SerializableClosure($value)));
                 }
             }
         }
@@ -551,7 +551,7 @@ trait Attributable
 
             foreach ($relations as $key => $value) {
                 if (is_string($value)) {
-                    $this->setEntityAttributeRelation($key, (new Serializer())->unserialize($value));
+                    $this->setEntityAttributeRelation($key, unserialize($value)->getClosure());
                 }
             }
         }
