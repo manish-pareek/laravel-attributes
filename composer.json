@@ -23,7 +23,6 @@
         "illuminate/console": ">=10.0 <13.0",
         "symfony/http-foundation": "^6.0|^7.0",
         "jeremeamia/superclosure": "^2.4.0",
-        "manish-pareek/laravel-support": "dev-master",
         "spatie/eloquent-sortable": "^4.0",
         "spatie/laravel-sluggable": "^3.6",
         "spatie/laravel-translatable": "^6.0"
@@ -50,11 +49,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/kaushikgfacility/laravel-support.git"
-        }
-    ]
+    "prefer-stable": true
 }
