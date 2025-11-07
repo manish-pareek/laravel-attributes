@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Rinvex\Attributes\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Rinvex\Support\Traits\ValidatingTrait;
+use Watson\Validating\ValidatingTrait;
 use Rinvex\Attributes\Support\ValueCollection;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
