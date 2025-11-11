@@ -13,9 +13,9 @@ trait ConsoleTools
      *
      * @return void
      */
-    protected function publishesMigrations(string $package, bool $isModule = false): void
+    protected function publishesAttributesMigrations(string $package, bool $isModule = false): void
     {
-        if (! $this->publishesResources()) {
+        if (! $this->publishesAttributesResources()) {
             return;
         }
 
@@ -45,9 +45,9 @@ trait ConsoleTools
      *
      * @return void
      */
-    protected function publishesConfig(string $package, bool $isModule = false): void
+    protected function publishesAttributesConfig(string $package, bool $isModule = false): void
     {
-        if (! $this->publishesResources()) {
+        if (! $this->publishesAttributesResources()) {
             return;
         }
 
@@ -67,7 +67,7 @@ trait ConsoleTools
      */
     protected function publishesViews(string $package, bool $isModule = false): void
     {
-        if (! $this->publishesResources()) {
+        if (! $this->publishesAttributesResources()) {
             return;
         }
 
@@ -87,7 +87,7 @@ trait ConsoleTools
      */
     protected function publishesLang(string $package, bool $isModule = false): void
     {
-        if (! $this->publishesResources()) {
+        if (! $this->publishesAttributesResources()) {
             return;
         }
 
@@ -153,7 +153,7 @@ trait ConsoleTools
      *
      * @return bool
      */
-    protected function publishesResources(): bool
+    protected function publishesAttributesResources(): bool
     {
         return ! $this->app->environment('production') || $this->app->runningInConsole() || $this->runningInDevzone();
     }
@@ -165,8 +165,8 @@ trait ConsoleTools
      *
      * @return bool
      */
-    protected function autoloadMigrations(string $module): bool
+    protected function autoloadAttributesMigrations(string $module): bool
     {
-        return $this->publishesResources() && $this->app['config'][str_replace(['laravel-', '/'], ['', '.'], $module).'.autoload_migrations'];
+        return $this->publishesAttributesResources() && $this->app['config'][str_replace(['laravel-', '/'], ['', '.'], $module).'.autoload_migrations'];
     }
 }

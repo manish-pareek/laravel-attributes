@@ -6,11 +6,11 @@ namespace Rinvex\Attributes\Models;
 
 use Illuminate\Support\Str;
 use Spatie\Sluggable\SlugOptions;
-use Rinvex\Support\Traits\HasSlug;
+use Rinvex\Attributes\Traits\HasSlug;
 use Spatie\EloquentSortable\Sortable;
 use Illuminate\Database\Eloquent\Model;
-use Rinvex\Support\Traits\HasTranslations;
-use Rinvex\Support\Traits\ValidatingTrait;
+use Rinvex\Attributes\Traits\HasTranslations;
+use Rinvex\Attributes\Traits\ValidatingTrait;
 use Spatie\EloquentSortable\SortableTrait;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
